@@ -1,0 +1,28 @@
+{
+   "name": "@faulkj/qisforquerystring",
+   "version": "1.0.0",
+   "description": "An extension of JavaScript's location object that simplifies access to the current URL's query string.",
+   "main": "dist/location.q.js",
+   "scripts": {
+      "test": "mocha"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/faulkj/qisforquerystring.git"
+   },
+   "keywords": [
+      "javascript",
+      "location",
+      "location.search",
+      "query string"
+   ],
+   "author": "Joshua Faulkenberry <j@joshuafaulkenberry.com> (https://joshuafaulkenberry.com/)",
+   "license": "Kopimi",
+   "bugs": {
+      "url": "https://github.com/faulkj/qisforquerystring/issues"
+   },
+   "homepage": "https://github.com/faulkj/qisforquerystring#readme",
+   "devDependencies": {
+      "swc": "^1.0.11"
+   }
+}
