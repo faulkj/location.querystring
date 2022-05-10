@@ -1,7 +1,7 @@
 /*
  * q is for Query String v1.0
  *
- * Kopimi (c) 2021 Joshua Faulkenberry
+ * Kopimi (c) 2022 Joshua Faulkenberry
  * Unlicensed under The Unlicense
  * http://unlicense.org/
  */
