@@ -1,6 +1,6 @@
 {
    "name": "@faulkj/qisforquerystring",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "description": "An extension of JavaScript's location object that simplifies access to the current URL's query string.",
    "main": "dist/location.q.js",
    "scripts": {
