@@ -1,13 +1,15 @@
 'use strict';
 
 /*
- * q is for Query String v1.0
+ * q is for Query String v1.1.1
  *
  * Kopimi (c) 2023 Joshua Faulkenberry
  * Unlicensed under The Unlicense
  * http://unlicense.org/
  */
-window.location.q = document.location.q = function (key = null, val = null, push = true) {
+window.location.q = document.location.q = function (key = null, val, push) {
+    if (typeof push == "undefined")
+        push = true;
     var updated = false;
     if (key === null)
         updated = "";
@@ -54,7 +56,7 @@ window.location.q = document.location.q = function (key = null, val = null, push
                             out.push([par + `[${x}]`, encodeURIComponent(obj[par][x])]);
                     else if (obj[par] === true)
                         out.push([par]);
-                    else if (obj[par] !== false)
+                    else if (obj[par] !== null)
                         out.push([par, encodeURIComponent(obj[par])]);
                 }
                 return out;
@@ -75,7 +77,7 @@ window.location.q = document.location.q = function (key = null, val = null, push
         if (updated instanceof Array && updated.length)
             updated = "?" + updated.map(d => d.join("=")).join("&");
         var newurl = `${window.location.protocol}//${window.location.host}${window.location.pathname}${updated}`;
-        if (push && history.hasOwnProperty("pushState"))
+        if (push && typeof window.history.pushState === "function")
             window.history.pushState({
                 path: newurl
             }, '', newurl);
